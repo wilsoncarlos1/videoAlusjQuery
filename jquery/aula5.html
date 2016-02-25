@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$("h2").css("margin","0");
+		$("p").css({margin:"0", color:"blue"});
+		$(".div1").css({"margin-bottom":"20px", background:"#ccc"});
+
+		//filhas
+
+		$(".div1 span").hide().delay("1000").fadeIn(1000).css({color:"green","font-size":"15px"});
+		$(".div1 h2").hide().css({"font-size":"25px", color:"red"}).fadeIn(800);
+	});
+		//filhos direto do elemento 
+		//para selecionar diretamente alguma coisa coloco o sinal de maior > 
+		//$(".div1 >span").css({color:"red"});
+
+		//primeiro elemento apos selecionado
+		$(".p1 + p").css({"font-size":"25px"});
+		
+
+
+
+	</script>
+</head>
+<body>
+	<div class ="div1">
+		<h2>H2 filho da div1</h2>
+		<p>P filho de DIV1<span>SPAN Filho P</span></p>
+		<span>Span Filho DIV1</span>
+	</div>
+	<h2>H2 fora de DIV1</h2>
+	<p class="p1"> P1 fora de DIv1</p>
+	<p>p2 fora de DIV1</p>
+	<p>p3 fora da DIV1</p>
+</body>
+</html>

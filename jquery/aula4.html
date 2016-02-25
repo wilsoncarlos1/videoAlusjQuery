@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Logica de com jquery</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script type="text/javascript">
+
+
+	//aqui fiz um efeito paa aparecer o h1 devagar e depois mudar o nome dele
+	$(document).ready(function(){
+		//aqui to falando q irei mudar a cor do h1
+		$("h1").css("color","#f66");
+		//deixa o h1 invisivel
+		$("h1").hide();
+		//aqui deixa 1 segundo para aparecer o outro efeito
+		$("h1").delay("1000");
+		//aqui o efeito ira aparecer devagar 
+		$("h1").fadeIn("slow");
+		//mudando o nome dele
+		$("h1").text("meu nome é wilson carlos");
+	});
+
+	$(document).ready(function(){
+		$("h2").css("color","#f66").hide().delay("1000").fadeIn("slow").text("muda o texto");
+	});
+	//encadeando em bloco TB COM CLIQUE
+	//mudar a cor da body e od h3
+		$(document).ready(function(){
+		$("h3")
+		.css("color","#f66")
+		.hide().delay("1000")
+		.fadeIn("slow")
+		.text("muda o texto")
+		.click(function(){
+			$("body").css("background","#c30")
+			$("h3").css("color" ,"#fff");
+		});
+
+		//mudando o link
+		$(document).ready(function(){
+			$("a").css({color: "red", display:"block"});
+			$(".link2").css("color","green");
+			$("#link3").css("color","#000");
+
+		});
+	});
+
+
+
+
+	</script>
+</head>
+<body>
+	<h1>Wilson Carlos</h1>
+	<h2>carlos Wilson</h2>
+	<h3>Teixeira wilson</h3>
+	<a href="#">Link 1</a>
+	<a href="#" class="link2">link2</a>
+	<a href="#" id="link3">link3</a>
+
+
+</body>
+</html>
